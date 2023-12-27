@@ -69,6 +69,7 @@ body {
 }
 
 .right-div {
+    color: #EDEFD9;
     padding-block: 25px;
     background-color: rgba(255, 255, 255, 0.013);
     backdrop-filter: blur(3px);
@@ -80,7 +81,7 @@ body {
     justify-content: space-around;
 }
 
-.right-div div {
+.search-bar, .Sunrise-Sunset, .weather-today, .future-weather {
     background-color: rgba(62, 64, 67, 0.332);
     width: 80%;
     backdrop-filter: blur(15px);
@@ -119,15 +120,61 @@ body {
 }
 
 .Sunrise-Sunset {
+    padding-inline: 20px;
     border-radius: 10px;
-    height: 18%;
+    height: 15%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.Sunrise-Sunset .Sunrise, .Sunset {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.desc-Icon {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+
+.desc-Icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.desc-Icon p {
+    font-size: 16px;
+}
+
+.Time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
 }
 
 .weather-today {
     border-radius: 15px;
     height: 40%;
+}
+
+.divs {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-today>hr {
+    border: 1px rgba(255, 255, 255, 0.16) solid;
 }
 
 .future-weather {
