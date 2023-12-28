@@ -83,7 +83,7 @@ body {
 
 .search-bar, .Sunrise-Sunset, .weather-today, .future-weather {
     background-color: rgba(62, 64, 67, 0.332);
-    width: 80%;
+    width: 90%;
     backdrop-filter: blur(15px);
 }
 
@@ -164,20 +164,68 @@ body {
 .weather-today {
     border-radius: 15px;
     height: 40%;
+    display: flex;
+    flex-direction: column;
 }
 
 .divs {
     width: 100%;
     height: 25%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 25px;
+    align-items: center;
 }
 
 .weather-today>hr {
     border: 1px rgba(255, 255, 255, 0.16) solid;
 }
 
+.right-today-div {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-today-div img {
+    width: 35px;
+    height: 35px;
+}
+
+.second-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-today-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
 .future-weather {
     border-radius: 10px;
     height: 20%;
+    display: flex;
+    flex-direction: row;
+}
+
+.future {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.future img {
+    width: 30px;
+    height: 30px;
 }
