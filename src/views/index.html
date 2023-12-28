@@ -14,17 +14,17 @@
                     <div class="data">
                         <div class="Location">
                             <img src="../assets/icons/location-pin.png" alt="Location icon">
-                            <p style="font-size: 16px;" >Tenes</p>
+                            <p style="font-size: 16px;" id="Location">Tenes</p>
                         </div>
                         <div class="Temperateur" >
-                            <h1>24 <sup>°</sup> C</h1>
+                            <h1><span id="degree"></span><sup>°</sup> C</h1>
                             <div class="desc" >
-                                <img src="../assets/icons/fog.png" alt="">
-                                <p style="font-size: 16px;">Fogg</p>
+                                <img src="../assets/icons/fog.png" alt="" id="iconOfTheWeatherOfDay">
+                                <p style="font-size: 16px;" id="DescOfTheWeatherOfDay">Fogg</p>
                             </div>
                         </div>
                         <div class="Date">
-                            <p style="color: aliceblue; font-size: 14px;" >31st Oct,2023</p>
+                            <p style="color: aliceblue; font-size: 14px;" id="DateOfTheDay">31st Oct,2023</p>
                         </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                             <p>Sunrise</p>
                         </div>
                         <div class="Time">
-                            <p>5:45 AM</p>
+                            <p id="SunriseTime"></p>
                         </div>
                     </div>
                     <div class="Sunset">
@@ -51,7 +51,7 @@
                             <p>Sunset</p>
                         </div>
                         <div class="Time">
-                            <p>5:45 PM</p>
+                            <p id="SunsetTime"></p>
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
                             <img src="../assets/icons/icons8-wind-50.png" alt="Wind">
                             <div class="second-div">
                                 <p>Wind Speed</p>
-                                <p>24 Kmph</p>
+                                <p><span id="windSpeed"></span> Kmph</p>
                             </div>
                         </div>
                         <div class="left-today-div">
@@ -75,7 +75,7 @@
                             <img src="../assets/icons/icons8-rain-50.png" alt="">
                             <div>
                                 <p>chances of Rain</p>
-                                <p>25%</p>
+                                <p><span id="ChanceOfRain"></span>%</p>
                             </div>
                         </div>
                         <div class="left-today-div">
@@ -103,7 +103,7 @@
                             <img src="../assets/icons/icons8-uv-64.png" alt="">
                             <div>
                                 <p>UV Quantity</p>
-                                <p>2.5</p>
+                                <p id="UV"></p>
                             </div>
                         </div>
                         <div class="left-today-div">
@@ -146,6 +146,7 @@
                 </div>
             </div>
         </div>
+        <script src="../controllers/DayWeather.js"></script>
         <script src="./renderer.js"></script>
     </body>
 </html>
