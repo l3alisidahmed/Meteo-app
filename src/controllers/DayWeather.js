@@ -8,6 +8,14 @@ const SunsetTime = document.getElementById("SunsetTime");
 const windSpeed = document.getElementById("windSpeed");
 const DailyChanceOfRain = document.getElementById("ChanceOfRain");
 const UV = document.getElementById("UV");
+const TomorrowDate = document.getElementById("TomorrowDate");
+const TomorrowIcon = document.getElementById("TomorrowIcon");
+const TomorrowDesc = document.getElementById("TomorrowDesc");
+const TomorrowDegree = document.getElementById("TomorrowDegree");
+const SecondDayDate = document.getElementById("2sdDayDate");
+const SecondDayIcon = document.getElementById("2sdDayIcon");
+const SecondDayDesc = document.getElementById("2sdDayDesc");
+const SecondDayDegree = document.getElementById("2sdDayDegree");
 
 let date;
 
@@ -37,13 +45,21 @@ fetch('http://api.weatherapi.com/v1/forecast.json?key=7feb2cdd174942d88f99510723
     const SWind = data.forecast.forecastday[0].day.maxwind_kph; 
     const dailyChanceOfRain = data.forecast.forecastday[0].day.daily_chance_of_rain;
     const dailyUV = data.forecast.forecastday[0].day.uv;
+    const tomorrowDate = data.forecast.forecastday[1].date;
+    const tomorrowIcon = data.forecast.forecastday[1].day.condition.icon;
+    const tomorrowDesc = data.forecast.forecastday[1].day.condition.text;
+    const tomorrowDegree = data.forecast.forecastday[1].day.maxtemp_c;
+    const secondDayDate = data.forecast.forecastday[2].date;
+    const secondDayIcon = data.forecast.forecastday[2].day.condition.icon;
+    const secondDayDesc = data.forecast.forecastday[2].day.condition.text;
+    const secondDayDegree = data.forecast.forecastday[2].day.maxtemp_c;
 
-    console.log(data.forecast.forecastday[0]);
+    console.log(data.forecast.forecastday);
     date = date.split(/[ ,]+/).slice(0,4).join(" ");
 
     loccation.innerHTML = locate;
     Degree.innerHTML = temp;
-    Icon.src = icon;
+    Icon.src = `https:${icon}`;
     Description.innerHTML = desc;
     DateOfTheDay.innerHTML = date;
     SunriseTime.innerHTML = riseTime;
@@ -51,7 +67,14 @@ fetch('http://api.weatherapi.com/v1/forecast.json?key=7feb2cdd174942d88f99510723
     windSpeed.innerHTML = SWind;
     DailyChanceOfRain.innerHTML = dailyChanceOfRain;
     UV.innerHTML = dailyUV;
-    
+    TomorrowDate.innerHTML = tomorrowDate;
+    TomorrowIcon.src = `https:${tomorrowIcon}`;
+    TomorrowDesc.innerHTML = tomorrowDesc;
+    TomorrowDegree.innerHTML = tomorrowDegree;
+    SecondDayDate.innerHTML = secondDayDate;
+    SecondDayIcon.src = `https:${secondDayIcon}`;
+    SecondDayDesc.innerHTML = secondDayDesc;
+    SecondDayDegree.innerHTML = secondDayDegree;
   })
   .catch(error => {
     // Handle errors
