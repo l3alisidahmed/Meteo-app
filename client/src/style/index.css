@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../assets/fogg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+}
+
+.left-div {
+    padding-left: 50px;
+    background-color: rgba(0, 0, 0, 0.732);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: #EDEFD9;
+}
+
+.left-div .content {
+    padding-top: 25px;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Location {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: end;
+}
+
+.Location img {
+    width: 28px;
+    height: 28px;
+}
+
+.Temperateur, .desc {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: baseline;
+}
+
+.desc img {
+    width: 20px;
+    height: 20px;
+}
+
+.right-div {
+    color: #EDEFD9;
+    padding-block: 25px;
+    background-color: rgba(255, 255, 255, 0.013);
+    backdrop-filter: blur(3px);
+    height: 100%;
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.search-bar, .Sunrise-Sunset, .weather-today, .future-weather {
+    background-color: rgba(62, 64, 67, 0.332);
+    width: 90%;
+    backdrop-filter: blur(15px);
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border-radius: 10px;
+    height: 6%;
+    align-items: center;
+}
+
+.search-bar #Search-bar {
+    border: none;
+    background-color: transparent;
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#Search-bar::placeholder {
+    padding-left: 15px;
+    color: #EDEFD9;
+}
+
+.line-icon {
+    width: 20px;
+    height: 90%;
+}
+
+.Search-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.Sunrise-Sunset {
+    padding-inline: 20px;
+    border-radius: 10px;
+    height: 15%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.Sunrise-Sunset .Sunrise, .Sunset {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.desc-Icon {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+
+.desc-Icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.desc-Icon p {
+    font-size: 16px;
+}
+
+.Time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.weather-today {
+    border-radius: 15px;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.divs {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 25px;
+    align-items: center;
+}
+
+.weather-today>hr {
+    border: 1px rgba(255, 255, 255, 0.16) solid;
+}
+
+.right-today-div {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-today-div img {
+    width: 35px;
+    height: 35px;
+}
+
+.second-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-today-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.future-weather {
+    border-radius: 10px;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+}
+
+.future {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.future img {
+    width: 30px;
+    height: 30px;
+}

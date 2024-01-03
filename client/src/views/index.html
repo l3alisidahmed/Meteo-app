@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style/index.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="main-div">
+            <div class="left-div">
+                <div class="content">
+                    <h1 style="font-size: 24px;" >SkyCast</h1>
+                    <div class="data">
+                        <div class="Location">
+                            <img src="../assets/icons/location-pin.png" alt="Location icon">
+                            <p style="font-size: 16px;" id="Location">Tenes</p>
+                        </div>
+                        <div class="Temperateur" >
+                            <h1><span id="degree"></span><sup>°</sup> C</h1>
+                            <div class="desc" >
+                                <img src="../assets/icons/fog.png" alt="" id="iconOfTheWeatherOfDay">
+                                <p style="font-size: 16px;" id="DescOfTheWeatherOfDay">Fogg</p>
+                            </div>
+                        </div>
+                        <div class="Date">
+                            <p style="color: aliceblue; font-size: 14px;" id="DateOfTheDay">31st Oct,2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-div">
+                <div class="search-bar">
+                    <input type="search" name="" id="Search-bar" placeholder="Search Location">
+                    <img src="../assets/icons/icons8-line-50.png" alt="line icon" class="line-icon">
+                    <img src="../assets/icons/icons8-search-50.png" alt="Search icon" class="Search-icon">
+                </div>
+                <div class="Sunrise-Sunset" >
+                    <div class="Sunrise">
+                        <div class="desc-Icon">
+                            <img src="../assets/icons/sunrise.png" alt="">
+                            <p>Sunrise</p>
+                        </div>
+                        <div class="Time">
+                            <p id="SunriseTime"></p>
+                        </div>
+                    </div>
+                    <div class="Sunset">
+                        <div class="desc-Icon">
+                            <img src="../assets/icons/sunset.png" alt="">
+                            <p>Sunset</p>
+                        </div>
+                        <div class="Time">
+                            <p id="SunsetTime"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-today">
+                    <div class="Speed divs">
+                        <div class="right-today-div">
+                            <img src="../assets/icons/icons8-wind-50.png" alt="Wind">
+                            <div class="second-div">
+                                <p>Wind Speed</p>
+                                <p><span id="windSpeed"></span> Kmph</p>
+                            </div>
+                        </div>
+                        <div class="left-today-div">
+                            <p>8%</p>
+                            <img src="../assets/icons/icons8-triangle-24.png" alt="">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="divs Rain">
+                        <div class="right-today-div">
+                            <img src="../assets/icons/icons8-rain-50.png" alt="">
+                            <div>
+                                <p>chances of Rain</p>
+                                <p><span id="ChanceOfRain"></span>%</p>
+                            </div>
+                        </div>
+                        <div class="left-today-div">
+                            <p>12%</p>
+                            <img src="../assets/icons/icons8-triangle-24 (1).png" alt="">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="divs Pressure">
+                        <div class="right-today-div">
+                            <img src="../assets/icons/icons8-pressure-rising-50.png" alt="">
+                            <div>
+                                <p>Pressure</p>
+                                <p>675 HPA</p>
+                            </div>
+                        </div>
+                        <div class="left-today-div">
+                            <p>9%</p>
+                            <img src="../assets/icons/icons8-triangle-24 (1).png" alt="">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="divs UV">
+                        <div class="right-today-div">
+                            <img src="../assets/icons/icons8-uv-64.png" alt="">
+                            <div>
+                                <p>UV Quantity</p>
+                                <p id="UV"></p>
+                            </div>
+                        </div>
+                        <div class="left-today-div">
+                            <p>0.675%</p>
+                            <img src="../assets/icons/icons8-triangle-24.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="future-weather">
+                    <div class="future">
+                        <p class="date" id="TomorrowDate">1st Nov</p>
+                        <img src="../assets/icons/icons8-sunny-50.png" alt="" class="icon" id="TomorrowIcon">
+                        <p class="degree"><span id="TomorrowDegree"></span> <sup>°</sup> C</p>
+                        <p class="desc" id="TomorrowDesc">Sunny</p>
+                    </div>
+                    <div class="future">
+                        <p class="date" id="2sdDayDate">2sd Nov</p>
+                        <img src="../assets/icons/icons8-partly-cloudy-day-48.png" alt="" class="icon" id="2sdDayIcon">
+                        <p class="degree"><span id="2sdDayDegree"></span> <sup>°</sup> C</p>
+                        <p class="desc" id="2sdDayDesc">Paratially cloudy</p>
+                    </div>
+                    <div class="future">
+                        <p class="date">3rd Nov</p>
+                        <img src="../assets/icons/icons8-partly-cloudy-day-48.png" alt="" class="icon">
+                        <p class="degree">32 <sup>°</sup> C</p>
+                        <p class="desc">Paratially cloudy</p>
+                    </div>
+                    <div class="future">
+                        <p class="date">4th Nov</p>
+                        <img src="../assets/icons/icons8-rain-48.png" alt="" class="icon">
+                        <p class="degree">32 <sup>°</sup> C</p>
+                        <p class="desc">Rain</p>
+                    </div>
+                    <div class="future">
+                        <p class="date">5th Nov</p>
+                        <img src="../assets/icons/icons8-rain-48.png" alt="" class="icon">
+                        <p class="degree">32 <sup>°</sup> C</p>
+                        <p class="desc">Rain</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../controllers/DayWeather.js"></script>
+        <script src="./renderer.js"></script>
+    </body>
+</html>
