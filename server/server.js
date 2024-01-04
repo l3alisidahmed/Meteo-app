@@ -8,6 +8,7 @@ const dbUrl = process.env.DB_URI;
 const User = require('./models/UserSchema');
 
 app.use(express.json());
+app.use(express.urlencoded({extended: false}))
 
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
     .then((result) => {
@@ -49,8 +50,10 @@ app.get('/getUser', async (req, res) => {
         const compare = bcrypt.compareSync(password, user.password);
         if ((user.username === username || user.email === email) && compare) {
             res.status(200).send(user);
+            return res.redirect('../client/src/views/index.html');
         }
     });
+    
 });
 
 
@@ -66,6 +69,7 @@ app.post('/addUser', (req, res) => {
     newUser.save()
         .then((result) => {
             res.send(result);
+            return res.redirect("../client/src/views/login.html");
         })
         .catch((err) => console.log(err.message));
 });
