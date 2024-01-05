@@ -10,7 +10,7 @@ const createWindow = () => {
         }
     })
 
-    win.loadFile('D:/My Project/my-elctron-app/client/src/views/index.html')
+    win.loadFile('D:/My Project/my-elctron-app/client/src/views/login.html')
 }
 
 app.whenReady().then(() => {
