@@ -42,15 +42,15 @@ app.get('/getUser/:id', async (req, res) => {
 });
 
 // get user by username or email and password
-app.get('/getUser', async (req, res) => {
-    const { username, email, password } = req.body;
+app.get('/LoginUser/:email/:password', async (req, res) => {
+    const email = req.params.email;
+    const password = req.params.password;
     const Users = await User.find();
 
     Users.forEach((user) => {
         const compare = bcrypt.compareSync(password, user.password);
-        if ((user.username === username || user.email === email) && compare) {
+        if (user.email === email && compare) {
             res.status(200).send(user);
-            return res.redirect('../client/src/views/index.html');
         }
     });
     
